@@ -9,7 +9,7 @@ const Home = () => {
   if (loading) return <Loader />;
   return (
     <Layout>
-      <div className="lg:px-[124px] lg:py-[135px] px-4 py-[135px] mx-auto grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4  gap-7">
+      <div className="lg:px-[124px] lg:py-[135px] px-4 py-[215px] mx-auto grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4  gap-7">
         {error
           ? error.message
           : experiences?.map((experience) => (
