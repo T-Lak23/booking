@@ -1,10 +1,10 @@
-# Booking
+# 🌍 BookIt: Experiences & Slots
 
 A fullstack web application that lets users explore travel experiences, check available time slots, and book experiences seamlessly — with promo codes, discounts, and booking confirmation.
 
 ---
 
-## Tech Stack
+## 🚀 Tech Stack
 
 ### **Frontend**
 
@@ -87,14 +87,14 @@ frontend/
 
 ## ⚙️ Environment Setup
 
-### 1️⃣ Clone the repository
+### Clone the repository
 
 ```bash
 git clone https://github.com/T-Lak23/booking.git
 cd booking
 ```
 
-### 2️⃣ Install dependencies
+### Install dependencies
 
 **Backend**
 
@@ -110,7 +110,7 @@ cd frontend
 npm install
 ```
 
-### 3️⃣ Create `.env` in `backend/`
+### Create `.env` in `backend/`
 
 ```env
 PORT=3000
@@ -119,7 +119,13 @@ CLIENT_URL=frontend_url
 NODE_ENV=development or production
 ```
 
-### 4️⃣ Run both servers
+### Create `.env` in `frontend/`
+
+```env
+VITE_BACKEND_URL=backend_url
+```
+
+### Run both servers
 
 **Backend**
 
