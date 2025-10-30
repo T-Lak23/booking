@@ -52,14 +52,16 @@ export const bookExperience = async (req, res) => {
     if (!experience) return throwError(404, "Experience not found");
     console.log("slot", experience.availableSlots);
 
-    const reqDate = String(date).trim();
-    const reqTime = String(time).trim().toLowerCase();
+    const reqDate = new Date(date).toISOString().split("T")[0];
+    const reqTime = time.trim().toLowerCase();
 
-    const slot = experience.availableSlots.find((s) => {
-      const slotDate = String(s.date).trim();
-      const slotTime = String(s.time).trim().toLowerCase();
-      return slotDate === reqDate && slotTime === reqTime;
-    });
+    const slot = experience.availableSlots.find(
+      (s) =>
+        (s.date instanceof Date
+          ? s.date.toISOString().split("T")[0]
+          : String(s.date).trim()) === reqDate &&
+        String(s.time).trim().toLowerCase() === reqTime
+    );
 
     if (!slot) {
       console.log(" Slot not found. Requested:", { reqDate, reqTime });
