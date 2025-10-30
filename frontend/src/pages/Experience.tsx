@@ -1,7 +1,7 @@
 import { useParams } from "react-router";
 import Layout from "../components/Layout";
 import { useExperienceStore } from "../store/useExperienceStore";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import GoBack from "../components/GoBack";
 import ExperienceInfoCard from "../components/ExperienceInfoCard";
 import CartTotal from "../components/CartTotal";

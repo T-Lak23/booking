@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useBookingStore } from "../store/useBookingStore";
 import type { Experience } from "../types/experiencesType";
 import Button from "./Button";
-import QuantitySelector from "./QuantitySelector";
 import { useNavigate } from "react-router";
 import useBooking from "../hooks/useBooking";
 
@@ -15,7 +14,7 @@ const FinalBreakdown = ({
 }) => {
   const { bookingData, setBookingData } = useBookingStore();
   const { handleSubmit, bookingError } = useBooking({ data: bookingData });
-  const [tax, setTax] = useState<number>(59);
+  const [tax, _] = useState<number>(59);
   const isDisabled = () => {
     return selectedExperience?.availableSlots.every(
       (slot) => slot.totalSeats - slot.bookedSeats === 0

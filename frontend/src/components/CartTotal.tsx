@@ -11,7 +11,7 @@ const CartTotal = ({
   selectedExperience: Experience | undefined;
 }) => {
   const { bookingData, setBookingData } = useBookingStore();
-  const [tax, setTax] = useState<number>(59);
+  const [tax, _] = useState<number>(59);
   const isDisabled = () => {
     return selectedExperience?.availableSlots.every(
       (slot) => slot.totalSeats - slot.bookedSeats === 0

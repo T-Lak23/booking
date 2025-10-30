@@ -14,7 +14,7 @@ const Checkout = () => {
   const { bookingData, setBookingData } = useBookingStore();
   const { validateCoupon } = usePromo();
   const [error, setError] = useState<any>(null);
-  const [loading, setLoading] = useState<boolean>(false);
+  const [_, setLoading] = useState<boolean>(false);
   const [discounted, setDiscounted] = useState();
   const [code, setCode] = useState<string>();
   const { id } = useParams();
