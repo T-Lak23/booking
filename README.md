@@ -139,7 +139,7 @@ npm run dev
 npm run dev
 ```
 
-Visit 👉 **[http://localhost:5173](http://localhost:5173)**
+Visit 👉 **[https://booking-frontend-w0nk.onrender.com](https://booking-frontend-w0nk.onrender.com)**
 
 ---
 
